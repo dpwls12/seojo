@@ -1,0 +1,47 @@
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('	c421f0568b1bb67d5d33ed60de10887b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '봉성예진 청첩장',
+        description: '아래 버튼을 눌러 웹 사이트에 방문하세요',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMDZfMjk4%2FMDAxNjQ2NTA4MzIwNzA5.hol5_ZeLe3l0dHGTXi29vdlxV1jvDhmFJI0Gf5ShBvsg.ASk86zG0prZZ55eUYgd0PC9ohHSDoy7KjQyZOcGZU8kg.JPEG.8ighth_note%2F%25C1%25A6%25B8%25F1_%25BE%25F8%25B4%25C2_%25BE%25C6%25C6%25AE%25BF%25F6%25C5%25A9.jpg&type=sc960_832',
+        link: {
+          mobileWebUrl: 'http://card-market.co.kr/whdp9',
+          webUrl: 'http://card-market.co.kr/whdp9',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '청첩장 바로보기',
+          link: {
+            mobileWebUrl: 'http://card-market.co.kr/whdp9',
+            webUrl: 'http://card-market.co.kr/whdp9',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
